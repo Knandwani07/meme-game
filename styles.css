@@ -1,0 +1,156 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #FBF7BA; /* Pale Yellow */
+    color: #9D1F15; /* Deep Red */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1150px;
+    padding: 20px;
+}
+
+/* Title */
+h1 {
+    font-size: 2.8rem;
+    color: #9D1F15; /* Deep Red */
+    margin-bottom: 15px;
+}
+
+/* Instructions */
+.instructions {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #9D1F15;
+    opacity: 0.9;
+}
+
+/* Game Board - Centered */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 85%;
+    max-width: 800px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/* Increased Card Size */
+.card {
+    width: 320px;
+    height: 250px; /* Increased height */
+    background: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 4px solid #9D1F15;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Flip Effect */
+.card.flipped {
+    background: rgba(157, 31, 21, 0.85);
+    border-color: #FBF7BA;
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Reveal Image */
+.card.flipped img {
+    opacity: 1;
+}
+
+/* Start Button */
+#start-game {
+    background: #9D1F15;
+    color: #ffffff;
+    padding: 16px 36px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+    margin-top: 20px;
+}
+
+#start-game:hover {
+    background: #7D1810;
+    transform: scale(1.1);
+}
+
+#start-game:active {
+    transform: scale(0.95);
+}
+
+.hidden {
+    display: none;
+}
+
+.confetti {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    color: #9D1F15;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.popup button {
+    background: #9D1F15;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.popup button:hover {
+    background: #7D1810;
+    transform: scale(1.1);
+}
+
