@@ -50,7 +50,7 @@ h1 {
 
 /* Increased Card Size */
 .card {
-    width: 320px;
+    width: 250px;
     height: 250px; /* Increased height */
     background: #ffffff;
     border-radius: 15px;
